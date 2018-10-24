@@ -51,7 +51,7 @@ def densratio(x, y, sigma_range = "auto", lambda_range = "auto",
 
     if x.shape[1] != y.shape[1]:
         raise ValueError("x and y must be same dimensions.")
-
+        #sigma_range == "auto" gives error when sigma_range is an array
     if not sigma_range or sigma_range == "auto":
         sigma_range = 10 ** linspace(-3, 1, 9)
     if not lambda_range or lambda_range == "auto":
